@@ -18,15 +18,14 @@ Image processing is an extremely useful tool used in various domains like image 
 **Some of the intended operations**
 
 ![Parrots](https://4.bp.blogspot.com/-JDiUP0w0HsY/WCHQH7WzRiI/AAAAAAAAEwQ/wESf29zre8kw_OZFzVr_hY0GSxeNCpW8wCLcB/s400/Origial_image.bmp)
-Orignal Image
+*Orignal Image*
 ___
 ![Inverted_Parrots](https://4.bp.blogspot.com/-WJCCVaw3gPY/WCHQHtje86I/AAAAAAAAEwU/GVZWtfNlv6wJIois2C7AoSIbbbXZA795QCEw/s400/Invert_Operation.bmp)
-Image with inverted colors
+*Image with inverted colors*
 ___
 ![low_brightness_parrots](https://3.bp.blogspot.com/-U9Bgoycnuao/WCHSnht7yQI/AAAAAAAAEwc/8p9sU0ZIDq82VJdDvey4_3kUYIxdFME9ACLcB/s400/Brightness_Subtraction.bmp)
-Image with reduced brightness
-
-
+*Image with reduced brightness*
+___
 
 
 > **Refferences**
