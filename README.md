@@ -1,4 +1,4 @@
-## Digital Logisc Design (CS203) Project
+## Digital Logic Design (CS203) Project
 *Proposal*
 >1) *Image Processing using Verilog*
 >2) *Fast Fourier Transform using Verilog*
@@ -36,7 +36,7 @@ ___
 ---
 **We've not been introduced to FFT yet ,so our priority is Image Processing using Verilog.**
 
-### Fast Fourier Trasnform (Low Priority)
+### Fast Fourier Transform (Low Priority)
 Fast fourier transform is one of the most important algorithms created in the last century. Much of the modern technology such as wireless communication, GPS or infact anything related to the vast field of signal processing relies on the insights of FFT.
 
 ![Fast Fourier Transform](https://i.ytimg.com/vi/h7apO7q16V0/maxresdefault.jpg)
