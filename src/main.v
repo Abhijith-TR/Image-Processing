@@ -15,3 +15,12 @@ reg [9:0] val;
 initial begin 
 	$readmemh("image.hex", hexfile);        //reading hexadecimal file of image into memory hexfile
 end
+	
+	
+initial begin
+	//Code to convert the given hex file to manipulated hex file-in progress
+end
+	
+initial begin
+	//writing to hex file-in progress	
+end
