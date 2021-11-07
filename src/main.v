@@ -8,7 +8,10 @@ reg  grayfile[m*n];
 reg  modfile[m*n*3];     
 reg  red_pixels[m*n];        
 reg  blue_pixels[m*n];         
-reg  green_pixels[m*n];    
+reg  green_pixels[m*n]; 
+reg [7:0] BMP_header[53:0];
+reg flag = 0;
+reg flagn = 0;
 integer file;//output file to write the hex code for image
 integer i, j, k=0;
 reg [9:0] val;
