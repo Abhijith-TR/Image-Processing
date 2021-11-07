@@ -6,6 +6,9 @@
 - [ ] Verilog module to perform operation on image matrix to convert it to image matrix for corresponding greyscale image.
 - [ ] MATLAB script to view the produced output hex file as humans can't percieve the produced hexadecimal file.
 
+## Pending
+- [ ] Performing other operations on the provided image.
+
 ---
 
 
