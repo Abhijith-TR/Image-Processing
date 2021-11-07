@@ -4,7 +4,7 @@
 >2) *Fast Fourier Transform using Verilog*
 
 
-### Image Processing using Verilog (High Priority)
+### Image Processing using Verilog (High Priority)- Approved
 Image processing is an extremely versatile practical field which is already in extensive daily use. It involves the use of various filters to manipulate images into desired forms and acquire results from them.
 
 ### Use of Image Processing
