@@ -23,7 +23,8 @@ initial begin
 		green[i] = hexfile[k+1];
 		blue[i] = hexfile[k+2];
 		val = red[i]+green[i]+blue[i];    
-		grayfile[i] = (val)/8'h03;        
+		grayfile[i] = (val)/8'h03;     
+		//grayfile[i] = 255-grayfile[i];  Uncomment to do inversion operation
 		k = k + 3;
 		
 	end	
