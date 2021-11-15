@@ -1,33 +1,49 @@
-module top; 
+module color2gray; //module name
 
-parameter m = 512;    //number of columns of image 
-parameter n = 512;    //number of rows of image
+parameter m = 768;    //number of columns of image 
+parameter n = 1024;    //number of rows of image
 
-reg  hexfile[m*n*3];
-reg  grayfile[m*n]; 
-reg  modfile[m*n*3];     
-reg  red_pixels[m*n];        
-reg  blue_pixels[m*n];         
-reg  green_pixels[m*n]; 
-reg [7:0] BMP_header[53:0];
-reg flag = 0;
-reg flagn = 0;
-integer file;//output file to write the hex code for image
+reg [7:0] hexfile[m*n*3];    //declaring hexadecimal file to store input image
+reg [7:0] grayfile[m*n];     //declaring converted gray file - hexdecimal
+reg [7:0] red[m*n];          //red color values
+reg [7:0] blue[m*n];         //blue color values
+reg [7:0] green[m*n];        //green color values
+integer file;
+reg [7:0] temp;
 integer i, j, k=0;
 reg [9:0] val;
 
 initial begin 
 	$readmemh("image.hex", hexfile);        //reading hexadecimal file of image into memory hexfile
 end
-	
-	
 initial begin
-	//Code to convert the given hex file to manipulated hex file-in progress
+	for(i=0; i<m*n; i=i+1)begin
+			
+		red[i] = hexfile[k];           //transferring values of RGB from image hexfile to red, green, blue registers
+		green[i] = hexfile[k+1];
+		blue[i] = hexfile[k+2];
+		val = red[i]+green[i]+blue[i];    //sum of RGB is stored in a larger register to prevent overflow
+		grayfile[i] = (val)/8'h03;        //divinding sum by 3 to obtain grayscale value
+		k = k + 3;
+		
+	end	
 end
-	
 initial begin
-	//writing to hex file-in progress	
+	for(i=0;i<n;i=i+1)begin
+		for (j = 0; j < m/2; j++) begin
+			temp=grayfile[(m*i)+j];
+			grayfile[(m*i)+j]=grayfile[(m*i)+(m-1)-j];
+			grayfile[(m*i)+(m-1)-j]=temp;
+		end
+	end
 end
+initial begin	
+	file = $fopen("grayimage.hex", "w");          //creating a hex file to store grayscale values of converted image
+	for(j=0; j<m*n; j=j+1)begin
+		$fwrite(file, "%x\n", grayfile[j]);     //writing values into file
+	end
+	$fclose(file);       //closing file
+end
+endmodule 
 
 
-endmodule
