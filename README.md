@@ -12,8 +12,8 @@ Image processing is an extremely useful tool used in various domains like image 
 
 ### Project Scope
 - [x] Research on various Image Manipulation Algorithms
-- [ ] We wish to implement image processing algorithms that will enable us to perform operations like inversions and brightness control. 
-- [ ] The program will take an image in .hex format, perform various operations on it and produce a .bmp file as the output. 
+- [x] We wish to implement image processing algorithms that will enable us to perform operations like inversions and brightness control. 
+- [x] The program will take an image in .hex format, perform various operations on it and produce a .bmp file as the output. 
 
 **Some of the intended operations**
 
