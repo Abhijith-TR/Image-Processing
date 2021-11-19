@@ -4,10 +4,10 @@ parameter m = 768;
 parameter n = 1024;
 
 reg [7:0] hexfile[0:m*n*3-1];    
-reg [7:0] grayfile[0:m*n];    
-reg [7:0] red[0:m*n];         
-reg [7:0] blue[0:m*n];        
-reg [7:0] green[0:m*n];       
+reg [7:0] grayfile[0:m*n-1];    
+reg [7:0] red[0:m*n-1];         
+reg [7:0] blue[0:m*n-1];        
+reg [7:0] green[0:m*n-1];       
 integer file;
 reg [7:0] temp;
 integer i, j, k=0;
