@@ -3,11 +3,11 @@ module color2gray;
 parameter m = 768;  
 parameter n = 1024;
 
-reg [7:0] hexfile[m*n*3];    
-reg [7:0] grayfile[m*n];    
-reg [7:0] red[m*n];         
-reg [7:0] blue[m*n];        
-reg [7:0] green[m*n];       
+reg [7:0] hexfile[0:m*n*3-1];    
+reg [7:0] grayfile[0:m*n];    
+reg [7:0] red[0:m*n];         
+reg [7:0] blue[0:m*n];        
+reg [7:0] green[0:m*n];       
 integer file;
 reg [7:0] temp;
 integer i, j, k=0;
@@ -46,5 +46,3 @@ initial begin
 	$fclose(file);       //closing file
 end
 endmodule 
-
-
