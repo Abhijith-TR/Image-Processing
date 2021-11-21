@@ -22,6 +22,8 @@ module rgb_to_greyscale; //module name
 			red[i] = hexfile[k];           //transferring values of RGB from image hexfile to red, green, blue registers
 			green[i] = hexfile[k+1];
 			blue[i] = hexfile[k+2];
+			
+			//Adding a constant value 32 (can be increaed to obtain higher brightnes) to each RGB pixel, if the values exceeds 255 after addition (maximum value of intensity) we set it to 255 
 			if (red[i] + 32 > 255) bright[k] = 255;
 			else bright[k] = red[i] + 8'b00011111;
 			if (green[i] + 32 > 255) bright[k+1] = 255;
