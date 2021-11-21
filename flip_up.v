@@ -19,10 +19,12 @@ module rgb_to_greyscale; //module name
 	end
 
 	initial begin
-		for (i=0;i<m*n/2;i=i+1) begin
+		for (i=0;i<m*n/2;i=i+1) begin //Going from the start to the middle of the image
             t1 = hexfile[k];
             t2 = hexfile[k+1];
             t3 = hexfile[k+2];
+			
+	    //Swapping the values at both ends of the image
             hexfile[k] = hexfile[m*n*3-(k+3)];
             hexfile[k+1] = hexfile[m*n*3-(k+2)];
             hexfile[k+2] = hexfile[m*n*3-(k+1)];
@@ -36,7 +38,7 @@ module rgb_to_greyscale; //module name
 
 	initial begin	
 		if (flag == 1) begin
-            file = $fopen("output.hex", "w");          //creating a hex file to store grayscale values of converted image
+			file = $fopen("output.hex", "w");          //creating a hex file to store pixel values of converted image
             for(j=0; j<m*n*3; j=j+1)begin
                 $fwrite(file, "%x\n", hexfile[j]);     //writing values into file
             end
