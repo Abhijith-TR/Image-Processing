@@ -23,6 +23,7 @@ module rgb_to_greyscale; //module name
 			green[i] = hexfile[k+1];
 			blue[i] = hexfile[k+2];
 			temp = red[i]+green[i]+blue[i];
+			///If pixel intensity is greater than a constant we set it black else white
             if (temp > 330) begin
                 grayfile[k] = 255;
                 grayfile[k+1] = 255;
