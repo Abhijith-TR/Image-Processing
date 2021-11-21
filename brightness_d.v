@@ -19,9 +19,12 @@ module rgb_to_greyscale; //module name
 
 	initial begin
 		for(i=0; i<m*n; i=i+1)begin
-			red[i] = hexfile[k];           //transferring values of RGB from image hexfile to red, green, blue registers
+			//transferring values of RGB from image hexfile to red, green, blue registers
+			red[i] = hexfile[k];           
 			green[i] = hexfile[k+1];
 			blue[i] = hexfile[k+2];
+			
+			//Multiplying the RGB register values by a factor 0.5 to decrease the brighness. This factor can be any +ve number <1.
 			bright[k] = red[i]*0.5; 
 			bright[k+1] = green[i]*0.5;
 			bright[k+2] = blue[i]*0.5;
