@@ -37,7 +37,7 @@ module rgb_to_greyscale; //module name
 		if (flag == 1) begin
 			file = $fopen("output.hex", "w");          //creating a hex file to store grayscale values of converted image
 			for(j=0; j<m*n*3; j=j+1)begin
-				$fwrite(file, "%x\n", bright[j]);     //writing values into file
+				$fwrite(file, "%x\n", bright[j]);     //writing values into hex file
 			end
 			//$display("%b",grayfile[j-1]);
 			$fclose(file);       //closing file
