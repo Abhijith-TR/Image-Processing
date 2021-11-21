@@ -22,6 +22,8 @@ module rgb_to_greyscale; //module name
 			red[i] = hexfile[k];           //transferring values of RGB from image hexfile to red, green, blue registers
 			green[i] = hexfile[k+1];
 			blue[i] = hexfile[k+2];
+			
+			//Subtracting all pixel intensities from 255 i.e. inverting all pixel values.
 			grayfile[k] = 255 - red[i];
             grayfile[k+1] = 255 - green[i];
             grayfile[k+2] = 255 - blue[i];
