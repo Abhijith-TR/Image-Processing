@@ -22,11 +22,11 @@ module rgb_to_greyscale; //module name
 			red[i] = hexfile[k];           //transferring values of RGB from image hexfile to red, green, blue registers
 			green[i] = hexfile[k+1];
 			blue[i] = hexfile[k+2];
-			if (red[i] + 100 > 255) bright[k] = 255;
+			if (red[i] + 32 > 255) bright[k] = 255;
 			else bright[k] = red[i] + 8'b00011111;
-			if (green[i] + 100 > 255) bright[k+1] = 255;
+			if (green[i] + 32 > 255) bright[k+1] = 255;
 			else bright[k+1] = green[i] + 8'b00011111;
-			if (blue[i] + 100 > 255) bright[k+2] = 255;
+			if (blue[i] + 32 > 255) bright[k+2] = 255;
 			else bright[k+2] = blue[i] + 8'b00011111;
 			k = k + 3;
 		end	
@@ -35,7 +35,7 @@ module rgb_to_greyscale; //module name
 
 	initial begin	
 		if (flag == 1) begin
-			file = $fopen("brightness.hex", "w");          //creating a hex file to store grayscale values of converted image
+			file = $fopen("output.hex", "w");          //creating a hex file to store grayscale values of converted image
 			for(j=0; j<m*n*3; j=j+1)begin
 				$fwrite(file, "%x\n", bright[j]);     //writing values into file
 			end

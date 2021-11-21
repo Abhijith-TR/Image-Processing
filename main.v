@@ -1,7 +1,7 @@
 module color2gray; 
 
-parameter m = 768;  
-parameter n = 1024;
+parameter m = 1024;  
+parameter n = 768;
 
 reg [7:0] hexfile[0:m*n*3-1];    
 reg [7:0] grayfile[0:m*n-1];    

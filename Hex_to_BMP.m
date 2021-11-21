@@ -1,4 +1,4 @@
-grayhex = fopen('inverted.hex', 'r'); %opening converted grayscale image hexfile
+grayhex = fopen('output.hex', 'r'); %opening converted grayscale image hexfile
 %imshow('test.bmp');                %original image
 grayimg = fscanf(grayhex, '%x');    %reading values from converted file
 fclose(grayhex);                     %closing file
@@ -19,6 +19,7 @@ outimg  = ones(rows,cols, 3);
           k=k+3;
       end
  end
+ 
 outimg=uint8(outimg);
 figure
 imshow(outimg);

@@ -1,5 +1,5 @@
 grayhex = fopen('grayimage.hex', 'r'); %opening converted grayscale image hexfile
-imshow('image.jpeg');                %original image
+%imshow('image.jpeg');                %original image
 grayimg = fscanf(grayhex, '%2x');    %reading values from converted file
 fclose(grayhex);                     %closing file
 
